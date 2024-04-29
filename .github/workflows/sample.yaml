@@ -9,5 +9,5 @@ jobs:
               run: echo "Hello"
             - name: multiline code
               run:
-                rpm -v
-                tree -v
+                npm -v
+                
