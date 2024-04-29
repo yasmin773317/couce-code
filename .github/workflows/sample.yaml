@@ -24,6 +24,6 @@ jobs:
             - name: checking version
               run: 
                 rpm -v
-                tree -v
+                tree -v 
 
             
