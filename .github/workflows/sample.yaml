@@ -10,3 +10,16 @@ jobs:
             - name: multiline code
               run:
                 npm -v
+    parallel-job-run:
+        runs-on: macos-latest
+        steps:
+            - name: install rpm package
+              run: brew install rpm
+            - name: install tree package
+              run: brew install tree
+    dependency-job:
+        runs-on: windows-latest
+        needs: run-shell-commands
+        steps:
+            - name: checking dependency job
+              run: step1 completed
