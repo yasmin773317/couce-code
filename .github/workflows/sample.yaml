@@ -9,18 +9,4 @@ jobs:
               run: echo "Hello"
             - name: multiline code
               run:
-                rpm -v
-                tree -v
-    parallel-job-run:
-        runs-on: macos-latest
-        steps:
-            - name: install tree package
-              run: brew install tree
-            - name: install rpm package
-              run: sudo port install rpm
-    dependent-job:
-        runs-on: windows-latest
-        needs: run-shell-commands
-        steps:
-            - name: echo final statement
-              run: fist step is completd           
+                npm -v
