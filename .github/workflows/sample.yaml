@@ -19,7 +19,11 @@ jobs:
               run: brew install tree
     dependency-job:
         runs-on: windows-latest
-        needs: run-shell-commands
+        needs: parallel-job-run
         steps:
-            - name: checking dependency job
-              run: step1 completed
+            - name: checking version
+              run: 
+                rpm -v
+                tree -v
+
+            
