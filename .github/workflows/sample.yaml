@@ -2,7 +2,7 @@ name: First Workflow
 on: [push]
 
 jobs:
-     :
+    run-shell-commands:
         runs-on: ubuntu-latest
         steps:
             - name: echo a string
@@ -24,6 +24,6 @@ jobs:
             - name: checking version
               run: 
                 rpm -v
-                tree -v 
+                tree -v
 
             
