@@ -1,0 +1,19 @@
+name: workflow sample commands
+on: [push]
+jobs:
+
+  Workflow-commands-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set variable
+        run: echo " Set Environment varibale"
+
+      - name: Execute commands
+        run: echo "::set-var name:MY_VAR::123"
+
+      - name: use env variable
+        run: echo "my varibale is $MY_VAR"
+
+
+ 
+
