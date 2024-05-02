@@ -1,0 +1,21 @@
+name: Expressions and Context
+on: [push]
+run-name: "Expressions and Context by @${{ github.actor }}, Events: ${{ github.event_name }}"
+jobs:
+    Expressions-and-context:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Expressions
+              run: |
+                echo ${{ 1 > 3 }}  
+                echo ${{ true && false }}  
+                echo ${{ 1 }}  
+                echo ${{ 'the String' }}
+            - name: Context
+              run: |
+                echo '${{ toJSON(github) }}'
+                echo '${{ toJSON(job) }}'
+                echo '${{ toJSON(secrets) }}'
+                echo '${{ toJSON(runner) }}'
+                echo '${{ toJSON(steps) }}'
+
