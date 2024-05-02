@@ -8,5 +8,5 @@ jobs:
             - name: Expressions
               run:   ${{ 1 > 3 }}  ${{ true && false }}  ${{ 1 }}  ${{ 'the String' }}
             - name: Context
-              run: echo ${{ toJSON(github) }} echo ${{ toJSON(job) }} echo ${{ toJSON(secrets) }} echo ${{ toJSON(runner) }} echo ${{ toJSON(steps) }}
+              run:   ${{ toJSON(github) }}   ${{ toJSON(job) }}   ${{ toJSON(secrets) }}   ${{ toJSON(runner) }}   ${{ toJSON(steps) }}
 
