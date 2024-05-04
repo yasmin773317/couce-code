@@ -18,6 +18,7 @@ jobs:
                echo "RANDOME_VAR=$RANDOM" >> "$GITHUB_ENV"
             - name: multiline env var
               run: |
+               DELEMITER=1234
                echo "RANDOME_JOKE<<$DELEMITER" >> "$GITHUB_ENV"
                echo "Random jokes" >> "$GITHUB_ENV"
                echo "$DELEMITER" >> "$GITHUB_ENV" 
