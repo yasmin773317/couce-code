@@ -9,16 +9,16 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: set env variable
-              run: echo '$GITHUB_REF'
+              run: echo $GITHUB_REF
             - name: log context
               run: echo '${{ github.ref }}'
             - name: Set step levelenv variable
-            env:
-            STEP_LEVEL_ENV_VAR: Step level env varibale
-            WF_ENV_VAR: Overridden workflow level env variable
-            run: |
-              echo $WF_ENV_VAR
-              echo $JOB_LEVEL_ENV
-              echo $STEP_LEVEL_ENV_VAR
-              echo $WF_ENV_VAR
+              env:
+                STEP_LEVEL_ENV_VAR: Step level env varibale
+                WF_ENV_VAR: Overridden workflow level env variable
+              run: |
+                echo $WF_ENV_VAR
+                echo $JOB_LEVEL_ENV
+                echo $STEP_LEVEL_ENV_VAR
+                echo $WF_ENV_VAR
 
