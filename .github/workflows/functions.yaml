@@ -20,7 +20,7 @@ jobs:
               run: echo 'Always runs'
             - name: Run when workflow Cancelled
               if: cancelled()
-              run: echo 'Run when workflow cancelled'
+              run: echo 'Run when workflow canceled'
 
  
 
