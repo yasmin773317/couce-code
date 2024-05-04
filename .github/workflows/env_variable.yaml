@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
     env-var-and-context:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - name: set env variable
               run: echo $GITHUB_REF
