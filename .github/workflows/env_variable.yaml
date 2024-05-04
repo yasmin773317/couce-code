@@ -1,0 +1,12 @@
+name:  Setting env variable
+on: [push]
+
+jobs:
+    env-var-and-context:
+        runs-on: windows-latest
+        steps:
+            - name: set env variable
+              run: echo '$GITHUB_REF'
+            - name: log context
+              run: echo '${{ github.ref }}'
+              
