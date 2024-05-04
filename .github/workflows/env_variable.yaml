@@ -15,7 +15,12 @@ jobs:
             - name: setup default variables
               run: |
                echo "NEW_ENV_VAR=$(date)" >> "$GITHUB_ENV"
-               echo "RANDOME_VAR=$RANDOME" >> "$GITHUB_ENV"
+               echo "RANDOME_VAR=$RANDOM" >> "$GITHUB_ENV"
+            - name: multiline env var
+              run: |
+               echo "RANDOME_JOKE<<$DELEMITER" >> "$GITHUB_ENV"
+               echo "Random jokes" >> "$GITHUB_ENV"
+               echo "$DELEMITER" >> "$GITHUB_ENV" 
             - name: Set step levelenv variable
               env:
                 STEP_LEVEL_ENV_VAR: Step level env varibale
@@ -28,4 +33,5 @@ jobs:
                 echo $WF_ENV_VAR
                 echo $NEW_ENV_VAR
                 echo $RANDOME_VAR
+                echo $RANDOME_JOKE
 
