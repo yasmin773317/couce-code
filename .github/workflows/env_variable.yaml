@@ -26,4 +26,6 @@ jobs:
                 echo $JOB_LEVEL_ENV
                 echo $STEP_LEVEL_ENV_VAR
                 echo $WF_ENV_VAR
+                echo $NEW_ENV_VAR
+                echo $RANDOME_VAR
 
